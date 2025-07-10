@@ -1,0 +1,14 @@
+[environment]
+python-version = "3.13"
+
+[[overrides]]
+include = ["src/core/config.py"]
+
+[overrides.rules]
+missing-argument = "warn"
+
+[[overrides]]
+include = ["tests/test_main.py"]
+
+[overrides.rules]
+unresolved-attribute = "warn"
