@@ -1,0 +1,28 @@
+# serializer version: 1
+# name: test_get_one_post_success
+  dict({
+    'author': 'Author 1',
+    'content': 'This is the first post.',
+    'created_at': '2025-01-01T12:00:00Z',
+    'id': '9e6dd69f-e135-4ab2-b92e-fe8d2807b66b',
+    'title': 'First Post',
+  })
+# ---
+# name: test_list_posts
+  list([
+    dict({
+      'author': 'Author 1',
+      'content': 'This is the first post.',
+      'created_at': '2025-01-01T12:00:00Z',
+      'id': '9e6dd69f-e135-4ab2-b92e-fe8d2807b66b',
+      'title': 'First Post',
+    }),
+    dict({
+      'author': 'Author 2',
+      'content': 'This is the second post.',
+      'created_at': '2025-01-01T12:00:00Z',
+      'id': '963029e8-7e6a-4316-a585-66beccf793c3',
+      'title': 'Second Post',
+    }),
+  ])
+# ---

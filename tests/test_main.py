@@ -17,11 +17,12 @@ class TestCreateApp:
     def test_route_list(self) -> None:
         app = create_app()
 
-        routes = [(route.path, route.methods) for route in app.routes]
+        routes = sorted([(route.path, sorted(route.methods)) for route in app.routes])
 
-        assert routes == [
-            ('/openapi.json', {'GET', 'HEAD'}),
-            ('/docs', {'GET', 'HEAD'}),
-            ('/docs/oauth2-redirect', {'GET', 'HEAD'}),
-            ('/redoc', {'GET', 'HEAD'}),
-        ]
+        assert routes == sorted([
+            ('/posts', ['GET']),
+            ('/openapi.json', ['GET', 'HEAD']),
+            ('/docs', ['GET', 'HEAD']),
+            ('/docs/oauth2-redirect', ['GET', 'HEAD']),
+            ('/redoc', ['GET', 'HEAD']),
+        ])
