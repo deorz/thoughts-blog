@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, dev, 'feature/*' ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main, dev, 'feature/*' ]
 
 jobs:
   code-quality:
@@ -63,11 +63,7 @@ jobs:
         run: |
           uv sync --dev
 
-      - name: Run tests
-        run: |
-          uv run pytest tests/
-
-      - name: Generate coverage report
+      - name: Run tests with coverage report
         if: always()
         run: |
           uv run pytest tests/ --cov=src --cov-report=xml --cov-report=term
