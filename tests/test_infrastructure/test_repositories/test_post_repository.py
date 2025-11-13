@@ -2,7 +2,7 @@ from src.infrastructure.repositories.post_repository import InMemoryPostReposito
 
 
 def test_in_memory_post_repository() -> None:
-    """Test the in-memory post repository."""
+    """Тестирует репозиторий постов в памяти."""
     repository = InMemoryPostRepository()
     posts = repository.get_all()
 

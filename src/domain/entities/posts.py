@@ -5,13 +5,13 @@ import pydantic
 
 
 class Post(pydantic.BaseModel):
-    """Represents a blog post."""
+    """Представляет пост блога."""
 
-    id: Annotated[str, pydantic.Field(description='The unique identifier of the post.')]
-    title: Annotated[str, pydantic.Field(description='The title of the post.')]
-    content: Annotated[str, pydantic.Field(description='The content of the post.')]
-    author: Annotated[str, pydantic.Field(description='The author of the post.')]
+    id: Annotated[str, pydantic.Field(description='Уникальный идентификатор поста.')]
+    title: Annotated[str, pydantic.Field(description='Заголовок поста.')]
+    content: Annotated[str, pydantic.Field(description='Содержимое поста.')]
+    author: Annotated[str, pydantic.Field(description='Автор поста.')]
     created_at: datetime.datetime = pydantic.Field(
         default_factory=datetime.datetime.now,
-        description='The timestamp when the post was created.',
+        description='Временная метка создания поста.',
     )

@@ -13,7 +13,7 @@ router = fastapi.APIRouter()
 def list_posts(
     list_posts_use_case: Annotated[ListPostsUseCase, fastapi.Depends(get_list_posts_use_case)],
 ) -> list[Post]:
-    """List all posts."""
+    """Возвращает список всех постов."""
     return list_posts_use_case.execute()
 
 
@@ -22,7 +22,7 @@ def get_one_post(
     get_one_post_use_case: Annotated[GetPostUseCase, fastapi.Depends(get_post_use_case)],
     pk: str,
 ) -> Post | None:
-    """Get one post by pk."""
+    """Возвращает один пост по первичному ключу."""
     post = get_one_post_use_case.execute(pk=pk)
 
     if post is None:
