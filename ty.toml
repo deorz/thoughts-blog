@@ -8,7 +8,7 @@ include = ["src/core/config.py"]
 missing-argument = "warn"
 
 [[overrides]]
-include = ["tests/test_main.py"]
+include = ["tests/*"]
 
 [overrides.rules]
 unresolved-attribute = "warn"

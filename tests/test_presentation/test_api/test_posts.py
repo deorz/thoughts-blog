@@ -12,7 +12,8 @@ def client() -> fastapi.testclient.TestClient:
 
 
 def test_list_posts(
-    client: fastapi.testclient.TestClient, snapshot: syrupy.assertion.SnapshotAssertion,
+    client: fastapi.testclient.TestClient,
+    snapshot: syrupy.assertion.SnapshotAssertion,
 ) -> None:
     """Test listing all posts."""
     response = client.get('/posts')
@@ -21,7 +22,8 @@ def test_list_posts(
 
 
 def test_get_one_post_success(
-    client: fastapi.testclient.TestClient, snapshot: syrupy.assertion.SnapshotAssertion,
+    client: fastapi.testclient.TestClient,
+    snapshot: syrupy.assertion.SnapshotAssertion,
 ) -> None:
     """Test getting one post successfully."""
     response = client.get('/posts/9e6dd69f-e135-4ab2-b92e-fe8d2807b66b')
