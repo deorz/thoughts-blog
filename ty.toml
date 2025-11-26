@@ -2,13 +2,13 @@
 python-version = "3.13"
 
 [[overrides]]
-include = ["src/core/config.py"]
+include = ["src/core/initializer.py"]
 
 [overrides.rules]
 missing-argument = "warn"
 
 [[overrides]]
-include = ["tests/test_main.py"]
+include = ["tests/*"]
 
 [overrides.rules]
 unresolved-attribute = "warn"
