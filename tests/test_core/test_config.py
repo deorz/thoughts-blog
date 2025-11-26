@@ -1,7 +1,7 @@
 import pydantic
 import pytest
 
-from src.core.config import init_config
+from src.core.initializer import init_config
 
 
 class TestInitConfig:

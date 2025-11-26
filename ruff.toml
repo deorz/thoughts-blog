@@ -8,7 +8,21 @@ exclude = ["*venv*", ".git", "build", "dist"]
 preview = true
 select = ["ALL"]
 
-ignore = ["D100", "D104", "D203", "D212", "DOC201", "DOC501", "CPY001", "PLR6301"]
+ignore = [
+    "D100",
+    "D104",
+    "D107",
+    "D203",
+    "D212",
+    "DOC201",
+    "DOC402",
+    "DOC501",
+    "CPY001",
+    "PLR6301",
+    "RUF001",
+    "RUF002",
+    "RUF003"
+]
 
 [format]
 preview = true
