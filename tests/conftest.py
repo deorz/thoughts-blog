@@ -9,6 +9,7 @@ def mock_config(mocker) -> None:
         {
             'APP_NAME': 'Test App',
             'DEBUG': 'True',
+            'DB_PATH': 'blog.sqlite3',
         },
     )
 
@@ -20,5 +21,6 @@ def default_config(mocker) -> None:
         {
             'APP_NAME': 'Test App',
             'DEBUG': 'True',
+            'DB_PATH': 'blog.sqlite3',
         },
     )

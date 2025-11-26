@@ -11,6 +11,7 @@ class TestInitConfig:
 
         assert config.app_name == 'Test App'
         assert config.debug is True
+        assert config.db_path == 'blog.sqlite3'
 
     def test_init_error(self, mocker) -> None:
         mocker.patch.dict('os.environ', {}, clear=True)

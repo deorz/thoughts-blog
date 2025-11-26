@@ -20,8 +20,6 @@ class TestCreateApp:
         routes = sorted([(route.path, sorted(route.methods)) for route in app.routes])
 
         assert routes == sorted([
-            ('/posts', ['GET']),
-            ('/posts/{pk}', ['GET']),
             ('/openapi.json', ['GET', 'HEAD']),
             ('/docs', ['GET', 'HEAD']),
             ('/docs/oauth2-redirect', ['GET', 'HEAD']),
